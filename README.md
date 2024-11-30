@@ -14,7 +14,7 @@ A template for building TypeScript types-only libraries. This project is designe
 Clone the repository and install dependencies:
 
 ```bash
-$ git clone https://github.com/yourusername/ts-types-lib-template.git
+$ git clone https://github.com/arye-zamir/ts-types-lib-template.git
 $ cd ts-types-lib-template
 $ pnpm install
 ```
