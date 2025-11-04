@@ -1,14 +1,33 @@
 {
   "name": "my-types-library",
   "version": "1.0.0",
-  "main": "",
+  "description": "A template for building TypeScript types-only libraries.",
+  "type": "module",
   "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "engines": {
+    "node": ">=22.11.0"
+  },
   "scripts": {
     "clean": "node scripts/clean-dist.js",
-    "build": "npm run clean && tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "pnpm run clean && tsc",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "echo \"No tests required for types-only library\" && exit 0"
   },
-  "keywords": [],
+  "keywords": [
+    "typescript",
+    "types",
+    "type-definitions",
+    "template",
+    "types-only"
+  ],
   "author": "Arye Zamir",
   "maintainers": [
     {
@@ -16,10 +35,15 @@
       "email": "arye.zamir@gmail.com"
     }
   ],
-  "license": "ISC",
-  "description": "A template for building TypeScript types-only libraries.",
+  "license": "MIT",
+  "repository": "",
   "devDependencies": {
-    "typescript": "^5.7.2"
+    "@eslint/js": "^9.15.0",
+    "eslint": "^9.15.0",
+    "globals": "^15.13.0",
+    "prettier": "^3.3.3",
+    "typescript": "^5.7.2",
+    "typescript-eslint": "^8.14.0"
   },
   "prettier": {
     "singleQuote": true,
